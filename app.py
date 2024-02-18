@@ -24,18 +24,25 @@ db.init_app(app)
 
 class Pets(db.Model):
     __tablename__ = "petInfo"
- 
     pet_name = db.Column(db.String(20), primary_key=True)
-    pet_type = db.Column(db.String(5), nullable=False)
-    username = db.Column(db.String(30), nullable=False)
+    pet_type = db.Column(db.String(5), nullable = True)
+    username = db.Column(db.String(30), nullable = True) # nullable=False
+
+class Users(db.Model):
+    __tablename__ = "userInfo"
+    user = db.Column(db.String(30), primary_key=True)
+    password = db.Column(db.String(30), nullable=False)
+    email = db.Column(db.String(50))
+    loggedIn = db.Column(db.Boolean, nullable=False)
 
 # Home route
 @app.route("/")
 def home():
+    #if we are logged in
     details = Pets.query.all()
     return render_template("home.html", details=details)
 
- 
+
 # Add data route
 @app.route("/add", methods=['GET', 'POST'])
 def add_pets():
@@ -55,8 +62,34 @@ def add_pets():
  
     return render_template("pets.html")
 
+@app.route("/register", methods=['GET','POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form.get('user')
+        password = request.form.get('password')
+        email = request.form.get('email')
+    
+        newPet = Pets(
+            username = username, # foreign key constraint
+            pet_type = 'dog',
+            pet_name = 'b', 
+        )
+        
+        newUser = Users(
+            user = username,
+            password = password,
+            email = email,
+            loggedIn = True
+
+        )
+        db.session.add(newUser)
+        db.session.commit()
+        db.session.add(newPet)
+        db.session.commit()
+        
+        return redirect(url_for('home'))
+    return render_template('register.html')
+
 if __name__ == "__main__":
     #create_db()
     app.run(debug=True)
-
-

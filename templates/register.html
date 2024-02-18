@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+ 
+{% block title %}
+Register yourself and your pet!
+{% endblock %}
+ 
+{% block content %}
+<h1 class="text-center my-5">Pet Details</h1>
+<div class="container">
+  <a href="{{ url_for('register') }}" class="btn mb-3 btn-outline-info">Back</a>
+  <form action="/register" method="POST">
+
+<div class="mb-3">
+  <label for="user" class="form-label">Username</label>
+  <input type="text" class="form-control" name="user" id="user" placeholder="Username" required>
+</div>
+
+<div class="mb-3">
+  <label for="email" class="form-label">Email Address</label>
+  <input type="password" class="form-control" name="email" id="email" placeholder="triplea@gmail.com" required>
+</div>
+
+<div class="mb-3">
+  <label for="password" class="form-label">Password</label>
+  <input type="password" class="form-control" name="password" id="user" placeholder="Password" required>
+</div>
+
+  <button type="submit" class="btn mt-3 btn-outline-success">Add Pet Information</button>
+  </form>
+  </div>
+{% endblock %}
