@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-.reminders {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-=======
 * {
   overflow: visible;
 }
@@ -13,7 +6,6 @@ body {
   background: linear-gradient(-45deg, #741afb, #e8afda, #e795d8, #901aff);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
->>>>>>> Stashed changes
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
@@ -108,5 +100,3 @@ body {
   display: grid;
   place-items: center;
 }
-
-
