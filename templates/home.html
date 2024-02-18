@@ -5,6 +5,7 @@ Pets and Their Owners
 {% endblock %}
  
 {% block content %}
+
 <h1 class="text-center my-5">📚Books Detail📚</h1>
 <div class="container d-flex justify-content-center align-items-center">
     <a class="btn btn-outline-info mb-3" href="{{ url_for('add_pets') }}">Add Pet Information</a>
@@ -18,7 +19,7 @@ Pets and Their Owners
             <th scope="col">Owner</th>
         </tr>
         </thead>
-        {% if not details%}
+        {% if not detail s%}
         <div class="text-center">
             <h3 class="my-5">No Records to Display!</h3>
         </div>

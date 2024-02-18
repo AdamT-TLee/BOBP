@@ -37,11 +37,19 @@ class Users(db.Model):
 
 # Home route
 @app.route("/")
-def home():
-    #if we are logged in
+def home(): #functionality
     details = Pets.query.all()
     return render_template("home.html", details=details)
 
+@app.route("/myPets")
+def myPets():
+    
+    # if request.method == 'POST':
+    #     username = request.form.get('user')
+    #     password = request.form.get('password')
+    #     user = Users.query.filter_by(user=username, password=password).first()
+    #specific = Pets.query.all()
+    return render_template("index.html")
 
 # Add data route
 @app.route("/add", methods=['GET', 'POST'])
@@ -69,11 +77,11 @@ def register():
         password = request.form.get('password')
         email = request.form.get('email')
     
-        newPet = Pets(
-            username = username, # foreign key constraint
-            pet_type = 'dog',
-            pet_name = 'b', 
-        )
+        # newPet = Pets(
+        #     username = username,
+        #     pet_type = 'cat',
+        #     pet_name = 'benjamin', 
+        # )
         
         newUser = Users(
             user = username,
@@ -84,8 +92,8 @@ def register():
         )
         db.session.add(newUser)
         db.session.commit()
-        db.session.add(newPet)
-        db.session.commit()
+        # db.session.add(newPet)
+        # db.session.commit()
         
         return redirect(url_for('home'))
     return render_template('register.html')

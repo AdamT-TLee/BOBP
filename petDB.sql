@@ -20,9 +20,9 @@ CREATE TABLE IF NOT EXISTS `petInfo`(
 );
 
 INSERT INTO `userInfo`
-VALUES ('dslidder', 'dslidder@iastate', 'pass',true), ('alex', 'alex@iastate','pass2',false), ('adam', 'adam@iastate','pass3',false);
+VALUES ('dslidder', 'dslidder@iastate', 'pass',true), ('alex', 'alex@iastate','pass2',false), ('adam', 'adam@iastate','pass3',false), ('caitih', 'caiti@iastate','pass4',false);
 
 INSERT INTO `petInfo`
-VALUES ('Cleo', 'Dog', 'dslidder'), ('Dragon', 'Cat', 'alex');
+VALUES ('Cleo', 'Dog', 'dslidder'), ('Dragon', 'Cat', 'alex'), ('Peanut', 'cat', 'caitih'), ('Toto', 'dog', 'adam');
 
 SELECT pet_name FROM petInfo WHERE username = 'dslidder';

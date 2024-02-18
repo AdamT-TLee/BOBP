@@ -2,7 +2,6 @@ import pymysql
  
 hostname = 'localhost'
 user = 'root'
-#Hide
 password = 'Pendulum1597!'
  
 # Initializing connection
