@@ -1,3 +1,7 @@
+* {
+  overflow: visible;
+}
+
 .reminders {
   border: 1px solid red;
   display: flex;
