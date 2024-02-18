@@ -19,11 +19,19 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.btn {
+  transition: all 0.4s;
+  border: 1px solid black;
+}
+
 .btn-pink {
   background-color: #f6adbe;
   color: #f3f3f3;
-  transition: all 0.4s;
-  border: 1px solid black;
+}
+
+.btn-white {
+  background-color: #fffeff;
+  color: #f6adbe;
 }
 
 .btn::after {

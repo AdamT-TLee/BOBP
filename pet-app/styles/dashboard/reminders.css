@@ -6,6 +6,7 @@ body {
   background: linear-gradient(-45deg, #741afb, #e8afda, #e795d8, #901aff);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
+
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
