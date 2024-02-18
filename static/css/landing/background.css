@@ -1,0 +1,6 @@
+.background-img {
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+    transform: translate(420px, -100px);
+  }
