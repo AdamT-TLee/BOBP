@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
  
 {% block title %}
-Home of Books
+Pets and Their Owners
 {% endblock %}
  
 {% block content %}
 <h1 class="text-center my-5">📚Books Detail📚</h1>
 <div class="container d-flex justify-content-center align-items-center">
-    <a class="btn btn-outline-info mb-3" href="{{ url_for('add_books') }}">Add Books</a>
+    <a class="btn btn-outline-info mb-3" href="{{ url_for('add_pets') }}">Add Pet Information</a>
 </div>
 <div class="container">
     <table class="table table-dark table-striped">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Book Title</th>
-            <th scope="col">Author</th>
+            <th scope="col">Name</th>
+            <th scope="col">Animal</th>
+            <th scope="col">Owner</th>
         </tr>
         </thead>
         {% if not details%}
@@ -26,9 +26,9 @@ Home of Books
         <tbody>
         {% for data in details %}
         <tr>
-            <th scope="row">{{data.id}}</th>
-            <td>{{data.title}}</td>
-            <td>{{data.author}}</td>
+            <th scope="row">{{data.pet_name}}</th>
+            <td>{{data.pet_type}}</td>
+            <td>{{data.username}}</td>
         </tr>
         {% endfor %}
         </tbody>
