@@ -1,0 +1,44 @@
+.form-box {
+    max-width: 500px;
+    min-height: 100vh;
+    padding: 1em 3em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .form-title {
+    font-weight: 400;
+  }
+  
+  .form-subtitle {
+    font-weight: 200;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--size-xl);
+    gap: 1em;
+  }
+  
+  .form-input {
+    display: grid;
+  }
+  
+  .form-register {
+    text-align: center;
+  }
+  
+  .form-register-link {
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .form-register-link:hover {
+    color: #a67883;
+  }

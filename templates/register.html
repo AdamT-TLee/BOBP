@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet App | Register</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=poppins@900,500,400,100,300,800,700,200,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern-normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing/background.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing/form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+</head>
+
+<body>
+    <main>
+        <img src="/pets.jpg" class="background-img">
+
+        <div class="form-center">
+            <div class="form-box">
+                <h1 class="form-title">Pet App</h1>
+                <h2 class="form-subtitle">Register now!</h2>
+
+                <form class="form-field" action="{{ url_for('register')}}" method = 'POST'>
+                    <div class="form-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="user">Username</label>
+                        <input type="text" name="user" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-animated btn-pink">
+                </form>
+                <div class="form-register">
+                    <a href="./index.html" class="form-register-link">Back to login.</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+ 
+{% block title %}
+Input information about your pet
+{% endblock %}
+ 
+{% block content %}
+<h1 class="text-center my-5">Pet Details</h1>
+<div class="container">
+  <a href="{{ url_for('home') }}" class="btn mb-3 btn-outline-info">Back</a>
+  <form action="/add" method="POST">
+
+<div class="mb-3">
+  <label for="pet_name" class="form-label">Name</label>
+  <input type="text" class="form-control" name="pet_name" id="pet_name" placeholder="Name of your pet" required>
+</div>
+
+<div class="mb-3">
+  <label for="pet_type" class="form-label">Animal</label>
+  <input type="text" class="form-control" name="pet_type" id="pet_type" placeholder="Cat or dog?">
+</div>
+
+
+  <button type="submit" class="btn mt-3 btn-outline-success">Add Pet Information</button>
+  </form>
+  </div>
+{% endblock %}
