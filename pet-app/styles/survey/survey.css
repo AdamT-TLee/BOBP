@@ -1,0 +1,14 @@
+.survey-box {
+  color: white;
+  text-align: center;
+  background-color: #f6adbe;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid red;
+}
+
+.survey-section {
+  color: white;
+  text-align: center;
+}
