@@ -105,6 +105,12 @@ def survey():
     return render_template("survey.html")
 
 
+@app.route("/dashboard", methods = ['GET', 'POST'])
+def dashboard():
+    myUsername = session.get('username') 
+    user_pet = Pets.query.filter_by(username = myUsername).first()   
+    return render_template("dashboard.html", myPet = user_pet)
+
 if __name__ == "__main__":
     #create_db()
     app.run(debug=True)
