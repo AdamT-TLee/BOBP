@@ -1,0 +1,16 @@
+.reminders {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.reminders-title {
+  font-size: var(--size-8xl);
+}
+
+.reminders-list {
+  list-style: none;
+  font-size: var(--size-6xl);
+}

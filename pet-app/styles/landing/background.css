@@ -1,0 +1,8 @@
+.background-img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+  transform: translate(400px);
+}
