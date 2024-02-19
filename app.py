@@ -101,7 +101,7 @@ def survey():
         )
         db.session.add(add_detail)
         db.session.commit()
-        return redirect(url_for('home'))
+        return redirect(url_for('dashboard'))
     return render_template("survey.html")
 
 
